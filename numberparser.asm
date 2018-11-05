@@ -8,9 +8,11 @@ _main:
     mov rbp, rsp
     
     push 0 ; rbp 
-    push 4 ; rbp + 8
+    push 6 ; rbp + 8
     
-    ; "471"
+    ; "47171"
+    push "1"
+    push "7" 
     push "1"
     push "7"
     push "4"    
@@ -89,7 +91,4 @@ exit:
     ; rdi is already set to the first argument (exit code)
     syscall
 
-section .data
-    input:      db "1023", 0
-    inputlen:   db 4
 
